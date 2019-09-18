@@ -1,8 +1,8 @@
 #!/usr/bin/env groovy
 def call(Closure body) {
 
-	stage('compile') {
- 	       snDevOpsStep (stepSysId:'2b36f1d0c70400108c2c02b827c26055')
+	stage('test') {
+ 	       snDevOpsStep (stepSysId:'2336f1d0c70400108c2c02b827c26056')
 	        printBuildinfo {
 	        	name = "Testing..."
 	        }
