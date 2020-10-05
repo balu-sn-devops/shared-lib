@@ -18,7 +18,7 @@ pipFunc() {
 	}
 	stage('Enable balancer') {
 	    //snDevOpsStep
-	    	snDevopsChange()
+	    	snDevOpsChange()
 		enableBalancerUtils()
 	}
 	stage('Check Status') {
