@@ -3,6 +3,7 @@ pipFunc() {
 
 	stage('Print Build Info') {
 	    //snDevOpsStep
+	    snDevOpsChange()
 		printBuildinfo {
 			name = "Sample Name"
 		}
