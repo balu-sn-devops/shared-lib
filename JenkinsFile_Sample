@@ -23,8 +23,13 @@ pipFunc() {
 		enableBalancerUtils()
 	}
 	stage('Check Status') {
-	    //snDevOpsStep 'e4407d439f723300a1af5bb0657fcf6b'
-	    snDevOpsChange()
+
+
 		checkStatus()
+		
+         withSonarQubeEnv('Sonar_Cloud') {
+	       sh '${SCANNER_HOME}/bin/sonar-scanner -Dproject.settings=${SCANNER_HOME}/conf/sonar-scanner-cloud.properties'
+       
+		}
 	}
 }
