@@ -1,6 +1,6 @@
 @Library('shared-lib')
 pipFunc() {
-
+stages{
 	stage('Print Build Info') {
 	    snDevOpsStep()
 	    //snDevOpsChange()
@@ -33,5 +33,5 @@ pipFunc() {
 		}
 	}
 	
-	
+	}
 }
