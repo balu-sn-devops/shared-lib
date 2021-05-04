@@ -1,5 +1,4 @@
-#!/usr/bin/env groovy
-#!/bin/sh
+
 
 @Library('shared-lib')_
 pipFunc() {
