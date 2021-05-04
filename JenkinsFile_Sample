@@ -1,5 +1,7 @@
 @Library('shared-lib')
 pipFunc() {
+pipeline{
+agent any
 	stages{
 	stage('Print Build Info') {
 	    snDevOpsStep()
@@ -34,4 +36,5 @@ pipFunc() {
 	}
 	
 	}
+}
 }
