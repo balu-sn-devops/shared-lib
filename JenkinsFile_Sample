@@ -30,9 +30,11 @@ pipFunc() {
 		environment {
 		 SCANNER_HOME = tool 'sonarScanner'
 		}
-         withSonarQubeEnv('Sonar_Cloud') {
-	       sh '${SCANNER_HOME}/bin/sonar-scanner -Dproject.settings=${SCANNER_HOME}/conf/sonar-scanner-cloud.properties'
+		steps {
+         	withSonarQubeEnv('Sonar_Cloud') {
+	       		sh '${SCANNER_HOME}/bin/sonar-scanner -Dproject.settings=${SCANNER_HOME}/conf/sonar-scanner-cloud.properties'
        
+			}
 		}
 	}
 }
