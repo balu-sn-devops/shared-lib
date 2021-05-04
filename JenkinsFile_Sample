@@ -1,8 +1,6 @@
 @Library('shared-lib')_
 pipFunc() {
-   environment {
-		 SCANNER_HOME = tool 'sonarScanner'
-	}
+
 	  		
 	stage('Print Build Info') {
 	    snDevOpsStep()
@@ -29,7 +27,9 @@ pipFunc() {
 
 		snDevOpsStep()
 		checkStatus()
-		
+		environment {
+		 SCANNER_HOME = tool 'sonarScanner'
+		}
          withSonarQubeEnv('Sonar_Cloud') {
 	       sh '${SCANNER_HOME}/bin/sonar-scanner -Dproject.settings=${SCANNER_HOME}/conf/sonar-scanner-cloud.properties'
        
