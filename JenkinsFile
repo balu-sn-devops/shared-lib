@@ -4,12 +4,6 @@
 //@SharedLibrary('shared-lib') _
 checkout scm
 
-// @Library('shared-lib') _ 
-// @SharedLibrary('shared-lib') _
-// checkout scm
-
-
-// @Library('shared-lib') _ 
 // @SharedLibrary('shared-lib') _
 // checkout scm
 
