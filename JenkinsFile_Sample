@@ -1,4 +1,4 @@
-@Library('shared-lib')_
+final myOneLib = library('shared-lib')
 pipFunc() {
 
 	stage('Print Build Info') {
@@ -11,7 +11,7 @@ pipFunc() {
 	stage('Disable balancer') {
 	   // snDevOpsStep
 	   	snDevOpsChange()
-		disableBalancerUtils()
+		myOneLib.disableBalancerUtils()
 	}
 	stage('Deploy') {
 	    //snDevOpsStep
@@ -20,7 +20,7 @@ pipFunc() {
 	stage('Enable balancer') {
 	    //snDevOpsStep
 	    	snDevOpsChange()
-		enableBalancerUtils()
+		//enableBalancerUtils()
 	}
 	stage('Check Status') {
 
