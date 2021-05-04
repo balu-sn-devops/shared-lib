@@ -31,7 +31,8 @@ pipeline{
 	             stage ('Check logs') {
 	                steps {
 	                	script{
-	                    filterLogs.verify('WARNING', 5)
+	                    filterLogs ('WARNING', 5)
+	                    filterLogs.verify()
 	                    }
 	                }
 	            }

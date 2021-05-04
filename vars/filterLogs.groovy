@@ -12,7 +12,7 @@ def call(String filter_string, int occurrence) {
     return this
 }
 
-def verify(String filter_string, int occurrence) {
+def verify() {
     echo 'verify from shared lib'
 }
 
