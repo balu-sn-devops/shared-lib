@@ -12,14 +12,12 @@ pipeline{
         
         stages{
 
-              stage('maven build'){
+              stage('sonar scan'){
                  environment {
 	    		 	SCANNER_HOME = tool 'sonarScanner'
 	  			  }
                   steps{
-                      script{
-		    	                sh "mvn clean install"
-                      	  }
+					 echo 'Build in progres'
 			         withSonarQubeEnv('Sonar_Cloud') {
 				       sh '${SCANNER_HOME}/bin/sonar-scanner -Dproject.settings=${SCANNER_HOME}/conf/sonar-scanner-cloud.properties'
 			       
@@ -28,13 +26,13 @@ pipeline{
                	     }  
                  }	
                  
-                 stage ('Check logs') {
-                    steps {
-                    	script{
-                        filterLogs ('WARNING', 5)
-                        }
-                    }
-                }
+	             stage ('Check logs') {
+	                steps {
+	                	script{
+	                    filterLogs ('WARNING', 5)
+	                    }
+	                }
+	            }
 		
            }	       	     	         
 }
