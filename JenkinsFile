@@ -35,7 +35,8 @@ pipeline{
 	                    //filterLogs ('WARNING', 5)
 	                    
 	                    def rootDir = pwd()
-                    	def example = load "${rootDir}/shared-lib/filterLogs.groovy"
+                    	def example = load "${rootDir}/shared-lib/vars/filterLogs.groovy"
+                    											  
 	                    example.verify()
 	                    }
 	                }
