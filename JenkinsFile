@@ -1,6 +1,8 @@
 #!/usr/bin/env groovy
 
-@Library('shared-lib') _ //master or whatever branch
+//@Library('shared-lib')_ 
+checkout scm
+library identifier:"shared-lib"
 
 pipeline{
 
