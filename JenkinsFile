@@ -13,7 +13,7 @@ checkout scm
 
 //library identifier:"shared-lib"
 
-pipeline{
+node {
 
     agent none
 
