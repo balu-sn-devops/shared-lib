@@ -31,7 +31,7 @@ pipeline{
 	             stage ('Check logs') {
 	                steps {
 	                	script{
-	                    shared-lib.filterLogs ('WARNING', 5)
+	                    filterLogs.call('WARNING', 5)
 	                    }
 	                }
 	            }
