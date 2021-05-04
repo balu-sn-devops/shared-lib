@@ -1,4 +1,4 @@
-@Library('shared-lib')
+@Library('shared-lib')_
 pipFunc() {
 pipeline{
 agent any
