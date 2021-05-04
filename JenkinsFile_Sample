@@ -29,14 +29,14 @@ pipFunc() {
 
 		snDevOpsStep()
 		checkStatus()
-		environment {
-		 def SCANNER_HOME = tool 'sonarScanner'
-		}
+		//environment {
+		 //def SCANNER_HOME = tool 'sonarScanner'
+		//}
 
      	withSonarQubeEnv('Sonar_Cloud') {
      	
-     		sh '${SCANNER_HOME}/bin/sonar-scanner --version'
-       		sh '${SCANNER_HOME}/bin/sonar-scanner -Dproject.settings=${SCANNER_HOME}/conf/sonar-scanner-cloud.properties'
+     		//sh '${SCANNER_HOME}/bin/sonar-scanner --version'
+       		sh '/var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonarScanner/bin/sonar-scanner -Dproject.settings=/var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonarScanner/conf/sonar-scanner-cloud.properties'
    
 		}
 
