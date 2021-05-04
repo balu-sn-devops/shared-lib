@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-@Library('shared-lib')_ 
+//@Library('shared-lib')_ 
 //checkout scm
 //library identifier:"shared-lib"
 
@@ -31,7 +31,7 @@ pipeline{
 	             stage ('Check logs') {
 	                steps {
 	                	script{
-	                    filterLogs ('WARNING', 5)
+	                    shared-lib.filterLogs ('WARNING', 5)
 	                    }
 	                }
 	            }
