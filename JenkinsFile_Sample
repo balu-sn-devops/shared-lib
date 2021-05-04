@@ -1,5 +1,9 @@
 @Library('shared-lib')_
 pipFunc() {
+   environment {
+		 SCANNER_HOME = tool 'sonarScanner'
+	}
+	  		
 	stage('Print Build Info') {
 	    snDevOpsStep()
 	    //snDevOpsChange()
