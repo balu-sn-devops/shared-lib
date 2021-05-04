@@ -2,29 +2,29 @@
 pipFunc() {
 
 	stage('Print Build Info') {
-	    //snDevOpsStep
-	    snDevOpsChange()
+	    snDevOpsStep()
+	    //snDevOpsChange()
 		printBuildinfo {
 			name = "Sample Name"
 		}
 	}
 	stage('Disable balancer') {
-	   // snDevOpsStep
+	   snDevOpsStep()
 	   	snDevOpsChange()
 		disableBalancerUtils()
 	}
 	stage('Deploy') {
-	    //snDevOpsStep
+	    snDevOpsStep()
 		deploy()
 	}
 	stage('Enable balancer') {
-	    //snDevOpsStep
-	    	snDevOpsChange()
+	    snDevOpsStep()
+	    //snDevOpsChange()
 		//enableBalancerUtils()
 	}
 	stage('Check Status') {
 
-
+		snDevOpsStep()
 		checkStatus()
 		
          withSonarQubeEnv('Sonar_Cloud') {
