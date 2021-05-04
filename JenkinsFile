@@ -1,8 +1,14 @@
 #!/usr/bin/env groovy
 
+
 @Library('shared-lib')_ 
 //@SharedLibrary('shared-lib') _
 checkout scm
+
+//@Library('shared-lib') _ 
+// @SharedLibrary('shared-lib') _
+// checkout scm
+
 //library identifier:"shared-lib"
 
 pipeline{
@@ -32,12 +38,9 @@ pipeline{
 	             stage ('Check logs') {
 	                steps {
 	                	script{
-	                    //filterLogs ('WARNING', 5)
+	                    filterLogs ('WARNING', 5)
 	                    
-	                    def rootDir = pwd()
-                    	def example = load "${rootDir}/shared-lib/vars/filterLogs.groovy"
-                    											  
-	                    example.verify()
+
 	                    }
 	                }
 	            }
