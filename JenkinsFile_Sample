@@ -1,4 +1,4 @@
-final myOneLib = library('shared-lib')
+final myOneLib = library('balu-sn-devop/shared-lib')
 pipFunc() {
 
 	stage('Print Build Info') {
