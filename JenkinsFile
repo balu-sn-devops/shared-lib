@@ -16,10 +16,7 @@ checkout scm
 pipeline{
 
     agent none
-    tools {
-        maven 'Maven'
 
-    }
         
         stages{
 

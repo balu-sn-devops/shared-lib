@@ -1,5 +1,5 @@
 @Library('shared-lib')
-pipFunc() {
+pipeline {
 
 	stage('Print Build Info') {
 	    snDevOpsStep()
