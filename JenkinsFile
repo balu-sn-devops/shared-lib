@@ -13,14 +13,15 @@ checkout scm
 
 //library identifier:"shared-lib"
 
-node {
+pipeline {
 
-    agent none
+    // agent any
 
         
         stages{
 
-              stage('sonar scan'){
+              stage('sonar scan')
+              {
                  environment {
 	    		 	SCANNER_HOME = tool 'sonarScanner'
 	  			  }
