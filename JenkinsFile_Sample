@@ -1,6 +1,5 @@
 @Library('shared-lib')_
 pipFunc() {
-	stages{
 	stage('Print Build Info') {
 	    snDevOpsStep()
 	    //snDevOpsChange()
@@ -31,7 +30,5 @@ pipFunc() {
 	       sh '${SCANNER_HOME}/bin/sonar-scanner -Dproject.settings=${SCANNER_HOME}/conf/sonar-scanner-cloud.properties'
        
 		}
-	}
-	
 	}
 }
