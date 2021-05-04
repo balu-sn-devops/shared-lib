@@ -1,6 +1,6 @@
 @Library('shared-lib')
 pipeline {
-
+stages {
 	stage('Print Build Info') {
 	    snDevOpsStep()
 	    //snDevOpsChange()
@@ -31,5 +31,7 @@ pipeline {
 	       sh '${SCANNER_HOME}/bin/sonar-scanner -Dproject.settings=${SCANNER_HOME}/conf/sonar-scanner-cloud.properties'
        
 		}
+	}
+	
 	}
 }
