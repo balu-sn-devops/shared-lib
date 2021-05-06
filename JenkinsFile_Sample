@@ -1,6 +1,7 @@
 
-
 @Library('shared-lib')_
+checkout scm
+
 pipFunc() {
 
 	  		
