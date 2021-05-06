@@ -28,7 +28,7 @@ pipeline {
                   steps{
 					 echo 'Build in progres'
 			         withSonarQubeEnv('Sonar_Cloud') {
-				       sh '${SCANNER_HOME}/bin/sonar-scanner -Dproject.settings=${SCANNER_HOME}/conf/sonar-scanner-cloud.properties'
+				       sh '${SCANNER_HOME}/bin/sonar-scanner -Dproject.settings=${SCANNER_HOME}/conf/qa-shared-sonar-scanner-cloud.properties'
 			       
 						}                      	  
                     
