@@ -1,11 +1,12 @@
 
 @Library('shared-lib')_
-checkout scm
+
 
 pipFunc() {
 
 	  		
 	stage('Print Build Info') {
+		checkout scm
 	    snDevOpsStep()
 	    //snDevOpsChange()
 		printBuildinfo {
