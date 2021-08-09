@@ -7,29 +7,29 @@ pipFunc() {
 	  		
 	stage('Print Build Info') {
 		checkout scm
-	    snDevOpsStep()
+	    
 	    //snDevOpsChange()
 		printBuildinfo {
 			name = "Sample Name"
 		}
 	}
 	stage('Disable balancer') {
-	   snDevOpsStep()
+	   
 	   	snDevOpsChange()
 		disableBalancerUtils()
 	}
 	stage('Deploy') {
-	    snDevOpsStep()
+	    
 		deploy()
 	}
 	stage('Enable balancer') {
-	    snDevOpsStep()
+	    
 	    //snDevOpsChange()
 		//enableBalancerUtils()
 	}
 	stage('Check Status') {
 
-		snDevOpsStep()
+		
 		checkStatus()
 		//environment {
 		 //def SCANNER_HOME = tool 'sonarScanner'
