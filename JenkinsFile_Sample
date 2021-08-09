@@ -42,10 +42,10 @@ pipFunc() {
    
 		//}
 		
-		  withSonarQubeEnv('sonarQube_local') {
-			sh '/var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonarScanner/bin/sonar-scanner -Dproject.settings=/var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonarScanner/conf/qa-shared-sonar-scanner.properties'
+		  //withSonarQubeEnv('sonarQube_local') {
+			//sh '/var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonarScanner/bin/sonar-scanner -Dproject.settings=/var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonarScanner/conf/qa-shared-sonar-scanner.properties'
 		       
-        }
+       // }
 
 	}
 }
