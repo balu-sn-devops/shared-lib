@@ -1,5 +1,5 @@
 
-@Library('shared-lib')
+@Library('shared-lib') _
 
 
 pipFunc() {
@@ -9,7 +9,7 @@ pipFunc() {
 		checkout scm
 	    
 	    //snDevOpsChange()
-		someLibraryMethod()
+		disableBalancerUtils()
 	}
 	
 
