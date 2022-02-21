@@ -1,6 +1,6 @@
 
 
-@Library('shared-lib@master)_
+@Library('shared-lib@master')_
 
 pipFunc() {
 
