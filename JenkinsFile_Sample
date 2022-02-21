@@ -9,43 +9,9 @@ pipFunc() {
 		checkout scm
 	    
 	    //snDevOpsChange()
-		printBuildinfo {
-			name = "Sample Name"
-		}
+		someLibraryMethod()
 	}
-	stage('Disable balancer') {
-	   
-	   	snDevOpsChange()
-		disableBalancerUtils()
-	}
-	stage('Deploy') {
-	    
-		deploy()
-	}
-	stage('Enable balancer') {
-	    
-	    //snDevOpsChange()
-		//enableBalancerUtils()
-	}
-	stage('Check Status') {
+	
 
-		
-		checkStatus()
-		//environment {
-		 //def SCANNER_HOME = tool 'sonarScanner'
-		//}
-
-     	//withSonarQubeEnv('Sonar_Cloud') {
-     	
-     		//sh '${SCANNER_HOME}/bin/sonar-scanner --version'
-       		//sh '/var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonarScanner/bin/sonar-scanner -Dproject.settings=/var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonarScanner/conf/qa-shared-sonar-scanner-cloud.properties'
-   
-		//}
-		
-		  //withSonarQubeEnv('sonarQube_local') {
-			//sh '/var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonarScanner/bin/sonar-scanner -Dproject.settings=/var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonarScanner/conf/qa-shared-sonar-scanner.properties'
-		       
-       // }
-
-	}
+	
 }
